@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <div class="result-card">
+            <div class="icon">
+                {% if "Vitiligo" in prediction %}
+                    🧬
+                {% else %}
+                    ✅
+                {% endif %}
+            </div>
+            <h2>Prediction Result:</h2>
+           <p class="output">{{ prediction.replace('\n', '<br>')|safe }}</p>
+            <p>Model Used: <strong>{{ model }}</strong></p>
+            <a href="/" class="back-button">🔁 Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vitiligo Detection Options</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Vitiligo Skin Detection</h1>
+        <form action="/detect_resnet50" method="post">
+            <button type="submit">🔬 Detect using ResNet50</button>
+        </form>
+
+        <form action="/detect_resnetrs50" method="post">
+            <button type="submit">🧠 Detect using ResNet-RS-50</button>
+        </form>
+
+
+
+        <form action="/detect_efficientnetb6" method="post">
+            <button type="submit">🧠 Detect using EfficientNetB6</button>
+        </form>
+
+
+         <form action="/detect_efficientnetv2" method="post">
+            <button type="submit">🧠 Detect using efficientnetv2</button>
+        </form>
+
+
+        
+         <form action="/detect_efficientnetb0" method="post">
+            <button type="submit">🧠 Detect using efficientnetb0</button>
+        </form>
+
+
+ <form action="/detect_resnet101" method="post">
+            <button type="submit">🧠 Detect using resnet101</button>
+        </form>
+
+
+    </div>
+</body>
+</html>
